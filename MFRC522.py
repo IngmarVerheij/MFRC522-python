@@ -571,7 +571,7 @@ class MFRC522:
             [[uint8]]: The complete data dump. The first index describes the data block in order, the second the byte of that block.
         """
         data = []
-        for i in range(4, 64, 4):
+        for i in range(0, 64, 4):
             # Authenticate
             status = self.Auth(self.PICC_AUTHENT1A, i, key, uid)
 
